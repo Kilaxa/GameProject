@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class PlayerController : MonoBehaviour
     private bool onGround;
     private Vector2 moveVector;
 
-    public Camera cam;
+    public Transform aimTarget;
+    public float turnSpeed = 1.0f;
 
     public float speed = 15f;
     public float jumpForce = 3500f;
@@ -22,14 +24,63 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        ///// Movement /////
+        MoveController();
+        JumpController();
+        RotationController();
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+        {
+            onGround = true;
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.CompareTag("Ground"))
+        {
+            onGround = false;
+        }
+    }
+    void MoveController()
+    {
         // WASD
-        moveVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).normalized;
-        rb.AddForce(new Vector3(moveVector.x, 0, moveVector.y) * speed);
-        transform.rotation = new Quaternion(transform.rotation.x, cam.transform.rotation.y, 0, 1);
-
-
+        if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))
+        {
+            rb.AddForce((transform.forward + (transform.right * -1)) * speed / Mathf.Sqrt(2));
+        }
+        else if (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))
+        {
+            rb.AddForce((transform.forward + transform.right) * speed / Mathf.Sqrt(2));
+        }
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.A))
+        {
+            rb.AddForce(((transform.forward * -1) + (transform.right * -1)) * speed / Mathf.Sqrt(2));
+        }
+        else if (Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.D))
+        {
+            rb.AddForce(((transform.forward * -1) + transform.right) * speed / Mathf.Sqrt(2));
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            rb.AddForce(transform.forward * speed);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(transform.forward * -1 * speed);
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            rb.AddForce(transform.right * -1 * speed);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            rb.AddForce(transform.right * speed);
+        }
+    }
+    void JumpController()
+    {
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && onGround)
         {
@@ -40,20 +91,16 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector3.down * fallingForce);
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
+    void RotationController()
     {
-        if (collision.collider.CompareTag("Ground"))
+        // Rotate with camera
+        if (rb.velocity.x != 0 || rb.velocity.z != 0)
         {
-            onGround = true;
-        }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.collider.CompareTag("Ground"))
-        {
-            onGround = false;
+            Vector3 direction = aimTarget.position - rb.position;
+            direction.y = 0;
+            rb.rotation = Quaternion.Slerp(rb.rotation, Quaternion.LookRotation(direction), turnSpeed * Time.deltaTime);
+            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+            aimTarget.position = ray.GetPoint(15);
         }
     }
 }
