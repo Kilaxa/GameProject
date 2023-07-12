@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
     private bool onGround;
-    private Vector2 moveVector;
+    
+    private Animator animator;
 
     public Transform aimTarget;
     public float turnSpeed = 1.0f;
@@ -20,6 +21,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
         MoveController();
         JumpController();
         RotationController();
+        AnimationController();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -65,6 +68,7 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKey(KeyCode.W))
         {
             rb.AddForce(transform.forward * speed);
+            animator.SetBool("Walk F", true);
         }
         else if (Input.GetKey(KeyCode.S))
         {
@@ -101,6 +105,14 @@ public class PlayerController : MonoBehaviour
             rb.rotation = Quaternion.Slerp(rb.rotation, Quaternion.LookRotation(direction), turnSpeed * Time.deltaTime);
             Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
             aimTarget.position = ray.GetPoint(15);
+        }
+    }
+
+    void AnimationController()
+    {
+        if(Input.anyKey == false)
+        {
+            animator.SetBool("Walk F", false);
         }
     }
 }
