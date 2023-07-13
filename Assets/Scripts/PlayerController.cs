@@ -90,10 +90,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(Vector3.up * jumpForce);
         }
-        if (rb.velocity.y < 0)
-        {
-            rb.AddForce(Vector3.down * fallingForce);
-        }
+        //if (rb.velocity.y < 0)
+        //{
+        //    rb.AddForce(Vector3.down * fallingForce);
+        //}
     }
     void RotationController()
     {
