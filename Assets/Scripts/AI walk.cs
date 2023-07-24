@@ -8,7 +8,13 @@ public class AI : MonoBehaviour
     public float speed = 0.1F;
     private Vector3 directionOfCharacter;
     private bool challenged = false;
-    
+    Animator myAnimation;
+
+    private void Start()
+    {
+        myAnimation = GetComponent<Animator>();
+    }
+
     void Update()
     {
         if (challenged)
@@ -16,6 +22,7 @@ public class AI : MonoBehaviour
             directionOfCharacter = Character.transform.position - transform.position;
             directionOfCharacter = directionOfCharacter.normalized;
             transform.Translate (directionOfCharacter * speed, Space.World);
+            myAnimation.SetBool("Walk", true); 
         }
     }
 
