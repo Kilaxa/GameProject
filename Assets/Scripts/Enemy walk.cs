@@ -11,7 +11,6 @@ public class Enemywalk : MonoBehaviour
     private NavMeshAgent _nav;
     Animator _myAnimation;
     private bool _collidedWithPlayer;
-    private float distans = 10f;
     private int _attackType;
     private int _maxValue = 3;
     private int _minValue = 0;
@@ -68,7 +67,7 @@ public class Enemywalk : MonoBehaviour
 
      void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == _player & distans > 10)
+        if (other.gameObject == _player)
         {
             _myAnimation.SetBool("IsNearPlayer", false);
             _myAnimation.SetBool("Walk", true);
