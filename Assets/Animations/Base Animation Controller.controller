@@ -203,6 +203,7 @@ AnimatorStateMachine:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Position: {x: 670, y: 170, z: 0}
 =======
     m_State: {fileID: 5139624203148804228}
@@ -225,11 +226,15 @@ AnimatorStateMachine:
 >>>>>>> parent of adfba64 (дополненный скрипт)
 =======
 >>>>>>> parent of 9ef449f (удары ии и хотьба новая)
+=======
+    m_Position: {x: 670, y: 170, z: 0}
+>>>>>>> parent of adfba64 (дополненный скрипт)
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -248,6 +253,11 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 460, y: 50, z: 0}
   m_ExitPosition: {x: 930, y: 40, z: 0}
 >>>>>>> adfba64d9a6b7659511d4c02bfacea65427e090d
+=======
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 460, y: 50, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+>>>>>>> parent of adfba64 (дополненный скрипт)
 =======
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 460, y: 50, z: 0}
