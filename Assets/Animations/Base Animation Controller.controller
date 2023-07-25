@@ -12,7 +12,6 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3900255559545960531}
-  - {fileID: 2328700765936908214}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -28,6 +27,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1101 &-6176629721354477629
 =======
@@ -72,6 +72,8 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+=======
+>>>>>>> parent of 9ef449f (удары ии и хотьба новая)
 --- !u!1101 &-3900255559545960531
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -146,6 +148,7 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - m_Name: IsNearPlayer
 =======
   - m_Name: isJumping
@@ -161,6 +164,8 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+=======
+>>>>>>> parent of 9ef449f (удары ии и хотьба новая)
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -189,6 +194,7 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 3562491859987342231}
     m_Position: {x: 440, y: 220, z: 0}
+<<<<<<< HEAD
   - serializedVersion: 1
 <<<<<<< HEAD
     m_State: {fileID: 2885655130046512779}
@@ -217,6 +223,8 @@ AnimatorStateMachine:
 =======
     m_Position: {x: 670, y: 170, z: 0}
 >>>>>>> parent of adfba64 (дополненный скрипт)
+=======
+>>>>>>> parent of 9ef449f (удары ии и хотьба новая)
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -262,58 +270,6 @@ AnimatorStateMachine:
 >>>>>>> parent of adfba64 (дополненный скрипт)
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -9067162392388685037}
---- !u!1101 &2328700765936908214
-AnimatorStateTransition:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: IsNearPlayer
-    m_EventTreshold: 0
-  m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 2885655130046512779}
-  m_Solo: 0
-  m_Mute: 0
-  m_IsExit: 0
-  serializedVersion: 3
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0
-  m_ExitTime: 0.97483224
-  m_HasExitTime: 0
-  m_HasFixedDuration: 1
-  m_InterruptionSource: 0
-  m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
---- !u!1102 &2885655130046512779
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: RightHand@Attack01
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: -6176629721354477629}
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f1613afb92638e743bace9a9392b5ee7, type: 3}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &3562491859987342231
 AnimatorState:
   serializedVersion: 6
