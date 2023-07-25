@@ -532,6 +532,7 @@ Transform:
   m_GameObject: {fileID: 214354394}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.23996064, y: -0.000000016709263, z: 0.0000000041302397, w: 0.97078264}
 =======
   m_LocalRotation: {x: 0.00068682194, y: 0.000000017206341, z: -1.1817696e-11, w: 0.99999976}
@@ -539,6 +540,9 @@ Transform:
 =======
   m_LocalRotation: {x: 0.23996064, y: 0.000000016703655, z: -0.0000000041288537, w: 0.97078264}
 >>>>>>> adfba64d9a6b7659511d4c02bfacea65427e090d
+=======
+  m_LocalRotation: {x: 0.23996064, y: -0.000000016709263, z: 0.0000000041302397, w: 0.97078264}
+>>>>>>> parent of adfba64 (дополненный скрипт)
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -880,6 +884,7 @@ Transform:
   m_GameObject: {fileID: 849402818}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.21727976, y: 0.00000001679531, z: -0.0000000037385983, w: 0.9761094}
 =======
   m_LocalRotation: {x: -0.017502785, y: -0.000000001075234, z: -1.8822473e-11, w: 0.9998468}
@@ -887,6 +892,9 @@ Transform:
 =======
   m_LocalRotation: {x: 0.21727976, y: -0.000000016795314, z: 0.000000003738599, w: 0.9761094}
 >>>>>>> adfba64d9a6b7659511d4c02bfacea65427e090d
+=======
+  m_LocalRotation: {x: 0.21727976, y: 0.00000001679531, z: -0.0000000037385983, w: 0.9761094}
+>>>>>>> parent of adfba64 (дополненный скрипт)
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1099,10 +1107,14 @@ Transform:
   m_GameObject: {fileID: 953124629}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: 0.21727973, y: 0.000000036604526, z: -0.000000008148085, w: 0.9761094}
 =======
   m_LocalRotation: {x: 0.21727973, y: -0.000000036604526, z: 0.000000008148085, w: 0.9761094}
 >>>>>>> adfba64d9a6b7659511d4c02bfacea65427e090d
+=======
+  m_LocalRotation: {x: 0.21727973, y: 0.000000036604526, z: -0.000000008148085, w: 0.9761094}
+>>>>>>> parent of adfba64 (дополненный скрипт)
   m_LocalPosition: {x: 0, y: 5.43, z: -7.16}
 =======
   m_LocalRotation: {x: -0.19362356, y: 0.000000008440383, z: 0.0000000016657802, w: 0.98107594}
